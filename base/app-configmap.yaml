@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  labels:
+    app: workshop-app
+    component: app
+data:
+  APP_GREETING: "Hello from OpenShift!"
+  APP_ENVIRONMENT: "default"
