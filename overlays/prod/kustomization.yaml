@@ -13,5 +13,5 @@ replicas:
 
 images:
   - name: workshop-app
-    newName: image-registry.openshift-image-registry.svc:5000/NAMESPACE/workshop-app
+    newName: image-registry.openshift-image-registry.svc:5000/<user>-prod/workshop-app # Project名は各自で設定してください
     newTag: promoted

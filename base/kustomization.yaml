@@ -13,8 +13,3 @@ resources:
 
 commonLabels:
   workshop: openshift-basic
-
-images:
-  - name: workshop-app
-    newName: image-registry.openshift-image-registry.svc:5000/NAMESPACE/workshop-app
-    newTag: latest
