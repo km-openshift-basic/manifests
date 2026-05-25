@@ -4,8 +4,17 @@ kind: Kustomization
 resources:
   - ../../base
 
+namePrefix: prod-
+
+labels:
+  - pairs:
+      env: prod
+    includeSelectors: true
+
 patches:
   - path: patch-config.yaml
+  - path: patch-app-db-url.yaml
+  - path: patch-route.yaml
 
 replicas:
   - name: app
@@ -13,5 +22,5 @@ replicas:
 
 images:
   - name: workshop-app
-    newName: image-registry.openshift-image-registry.svc:5000/<user>-prod/workshop-app # Project名は各自で設定してください
+    newName: image-registry.openshift-image-registry.svc:5000/<user>-devspaces/workshop-app # Project名は各自で設定してください
     newTag: promoted
