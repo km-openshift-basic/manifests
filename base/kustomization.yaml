@@ -11,5 +11,7 @@ resources:
   - db-secret.yaml
   - db-pvc.yaml
 
-commonLabels:
-  workshop: openshift-basic
+labels:
+  - pairs:
+      workshop: openshift-basic
+    includeSelectors: true
